@@ -3,301 +3,451 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/poweruplogo.png">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/05c09a2891.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="unanonymous"></script>
-    <style>
-        .indigo{
-            color: rgba(79,82,255,255);
-        }
-        .bg-indigo{
-            background-color: rgba(79,82,255,255);
-        }
-        .bg-indigo:hover{
-            background-color: rgba(79,82,200,255);
-        }
-        .section-bg-indigo{
-            background-color: #edeeff;
-        }
-        .element-bg-indigo{
-            background-color: rgba(79,82,255,255);
-        }
-    </style>
-    <title>Document</title>
+    <title>PowerUP</title>
+    
 </head>
 <body>
     <!-- navbar -->
-    <section class="mt-4">
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-lg" col-7>
-
-              <a class="navbar-brand fw-bold me-5 pe-5" href="#">
-                <img class="img-fluid mb-2" src="assets/Pixel Plaza Logo.png" alt="" width="50px"> PowerUP
+    <section>
+        <nav class="navbar navbar-expand-lg bg-bestbuy">
+            <div class="container-lg d-flex">
+              <a class="navbar-brand d-none d-md-block" href="#">
+                <img class="img-fluid" src="assets/poweruplogo.png" alt="" width="50px">
               </a>
 
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown ms-3 me-3">
+                        <a class="nav-link text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg> 
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item text-primary" href="#">Top Deals</a></li>
+                          <li><a class="dropdown-item text-primary" href="#">Deals of the Day</a></li>
+                          <li><a class="dropdown-item text-primary" href="#">All Appliances</a></li>
+                          <li><a class="dropdown-item text-primary" href="#">Mobiles</a></li>
+                          <li><a class="dropdown-item text-primary" href="#">Laptops</a></li>
+                          <li><a class="dropdown-item text-primary" href="#">Best Buy Outlet</a></li>
+                          <li><a class="dropdown-item text-primary" href="#">Toys, Games, & Collectibles</a></li>
+                        </ul>
 
+                    </li>
+                    <!-- <li>
 
-              <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNavAltMarkup">
-                <div class="navbar-nav ">
-                  <a class="nav-link me-3 pe-4 fw-bold indigo" aria-current="page" href="#">Home</a>
-                  <a class="nav-link me-3 pe-4 fw-bold indigo" href="#">Contact</a>
-                  <a class="nav-link me-3 pe-4 fw-bold indigo" href="">Games</a>
+                    </li> -->
+
+                </ul>
+              </div>
+
+              <div class="input-group ms-3 me-3">
+                <a class="navbar-brand d-md-none " href="#">
+                    <img class="img-fluid" src="assets/poweruplogo.png" alt="" width="20px">
+                  </a>
+                <input type="text" class="form-control" placeholder="Search Product" aria-label="Search Product" aria-describedby="button-addon2">
+                <button class="btn btn-light bg-white" type="button" id="button-addon2">
+                    <img src="assets/magnifying glass.png" alt="" width="30px" >
+                </button>
+
+                <div class="d-flex mt-2 ms-4">
+                    <svg class="mt-1 me-1" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z"/></svg>
+                    <a class="nav-link fw-bold text-light me-2" aria-current="page" href="#">Inverness</a>
+    
+                    <svg class="mt-1 me-1" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                    <a class="nav-link fw-bold text-light" aria-current="page" href="#">Cart</a>
                 </div>
+
               </div>
 
 
             </div>
           </nav>
     </section>
-    
-    <section class="mt-3 pt-3">
-        <div class="container-xl">
-            <div class="row d-flex justify-content-center">
-                <div class="col-11 col-md-5 d-flex align-items-center ">
-                    <div class="display-4 text-md-start text-center fw-bold indigo">
-                        Innovate Your Digital Lifestyle
-                        <p class="lead text-secondary mt-4">An online destination that provides the latest and most innovative electronic devices, gadgets, and accessories to elevate your digital lifestyle.</p>
-                        <a href="#games"><button type="button" class="btn bg-indigo text-light btn-lg" >Browse Store</button></a>
-                        
+
+    <!-- second navbar -->
+    <section>
+        <nav class="navbar navbar-expand-lg bg-bestbuy border-top border-info d-none d-md-block ">
+            <div class="container-lg ">
+         
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item fs-small">
+                    <a class="nav-link text-light underlinedLink" href="#">Top Deals</a>
+                  </li>
+                  <li class="nav-item fs-small">
+                    <a class="nav-link text-light underlinedLink" href="#">Deal of the Day</a>
+                  </li>
+                  <li class="nav-item fs-small">
+                    <a class="nav-link text-light underlinedLink" href="#">Gift Cards</a>
+                  </li>
+                  <li class="nav-item fs-small">
+                    <a class="nav-link text-light underlinedLink" href="#">Gift Ideas</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <li class="nav-item dropdown ms-3 me-3 fs-small">
+                        <a class="nav-link text-light underlinedLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account
+                        </a>
+
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item text-primary" href="#">Sign In</a></li>
+                          <hr>
+                          <li><a class="dropdown-item text-primary" href="#">Create Account</a></li>
+                        </ul>
+
+                    </li>
+                  </li>
+                  <li class="nav-item fs-small">
+                    <a class="nav-link text-light underlinedLink" href="#">Recently Viewed</a>
+                  </li>
+                  <li class="nav-item fs-small">
+                    <a class="nav-link text-light underlinedLink" href="#">Gift Cards</a>
+                  </li>
+                  <li class="nav-item fs-small">
+                    <a class="nav-link text-light underlinedLink" href="#">Gift Ideas</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </nav>
+    </section>
+
+    <!-- first section -->
+
+    <section class="bg-bestbuy-darker border-top border-light pb-5">
+        <div class="container-lg d-flex justify-content-center">
+            <div class="row pt-4 col-12 col-md-9">
+                <div class="col-6 d-flex justify-content-center">
+                    <div class="fw-bold">
+                        <span class="display-3 fw-bold text-light">Great Deals.</span> <br>
+                        <span class="display-6 fw-bold text-bestbuyyellow ">All in one place.</span>
                     </div>
+                </div>
+
+                <div class="col-6 d-flex justify-content-center pt-4">
+                    <div>
+                        <div class="h4 text-light">Find new deals all season long.</div> 
+
+                        <p class="text-light fs-smaller">Limited quantities. No rainchecks. See <span class="text-bestbuyyellow">Holiday FAQs</span></p>
+                        <button id="bg-bestbuyyellow" class="btn fs-smaller text-dark bg-bestbuyyellow fw-bold">Shop Now</button>
+                    </div> 
+                </div>
+
+
+                <div class="col-12 mt-5">
+                    <div class="p d-flex justify-content-start text-light fs-5">Shop deals by category</div>
+                </div>
+
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/exclusive member deals.png" alt="" width="150px">
+                        <span class="text-bestbuyyellow fw-bold fs-small">Exclusive Member Deals</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/tvs and projectors.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">TVs & Projectors</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/laptops.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Laptops & Computers</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/video games.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Video Games, Consoles & VR</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/apple.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Apple</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/cellphones.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Cell Phones</span>
+                    </a>
+                </div>
+
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/major appliances.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Major Appliances</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/headphones.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Headphones</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/PC Gaming.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">PC Gaming</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/tablets.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Tablets & E-Readers</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/sound bars.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Sound Bars & Speakers</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/wearabletech.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Wearable Technology</span>
+                    </a>
+                </div>
+
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/cameras.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Cameras</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/outdoor living.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Outdoor Living</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/small appliances.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Small Appliances</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/smart home.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Security & Wi-Fi</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/printers.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Printers</span>
+                    </a>
+                </div>
+                <div class="col-4 col-md-2 mt-4 mb-4 text-center">
+                    <a class="text-decoration-none" href="#">
+                        <img class="rounded-pill border border-secondary-subtle border-2" src="assets/electric transportation.png" alt="" width="150px"> <br>
+                        <span class="text-bestbuyyellow fw-bold fs-small">Electric Transport</span>
+                    </a>
                 </div>
                 
-                <div class="col-12 col-md-7 d-flex">
-                    <img class="img-fluid d-flex" src="assets/Gamer.JPG" alt="" >
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-3">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid" src="assets/topdeals.jpeg" alt="" width="700px">
+                </div>
+                <div class="col-12 col-md-6 mt-2 mt-md-0">
+                    <div class="row">
+                        <div class="col-12 bg-white border border-1">
+                            <h6 class="ms-2 mt-2 fw-bold">Today's popular picks</h6>
+
+                            <div class="col-12 d-flex align-items-center">
+                                <div class="col-3">
+                                    <img class="img-fluid mb-2"src="assets/airpods.jpeg" alt="" width="80px"> <br>
+                                    <a class="fs-smaller text-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">Apple - AirPods Pro (with Magsafe...</a>
+                                </div>
+
+                                <div class="col-3">
+                                    <img class="img-fluid"src="assets/iphone13.jpeg" alt="" width="70px"> <br>
+                                    <a class="fs-smaller text-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">Apple - iPhone 13 Pro Max 5G 128GB - Alpin...</a>
+                                </div>
+
+                                <div class="col-3">
+                                    <img class="img-fluid"src="assets/applewatch.jpeg" alt="" width="80px"> <br>
+                                    <a class="fs-smaller text-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">Apple Watch Series 7 (GPS) 41mm Midnight...</a>
+                                </div>
+                                <div class="col-3">
+                                    <img class="img-fluid pb-1 pt-2" src="assets/macbookair.jpeg" alt="" width="140px"> <br>
+                                    <a class="fs-smaller text-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">MacBook Air 13.3 Laptop - Apple M1...</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 col-6 col-md-6 bg-white border border-1 py-3">
+                            <p class="ms-2 mt-4 me-0 fw-bold d-inline bg-bestbuy px-2 py-1"><span class="text-bestbuyyellow">Outlet </span><span class="text-light">Deals</span></p>
+
+                            <div class="col-12 d-flex align-items-center mt-5">
+                                <div class="display-6 fw-bold">
+                                   <span class="text-danger">Clearance</span> , open-box and more <span class="text-danger">.</span>
+                                </div>
+                            </div>
+
+                            <div class="col-12 d-flex align-items-center mt-5">
+                                <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover mt-2" href="#">View outlet deals</a>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 col-6 bg-white border border-1 py-3">
+                            <h6 class="ms-2 mt-1 fw-bold">Continue Shopping</h6>
+
+                                <div class="col-12 d-flex align-items-center justify-content-center mt-5">
+                                    <img src="assets/iphone13.jpeg" alt="" width="100px">
+                                </div>
+
+                            <div class="col-12 d-flex align-items-center mt-5">
+                                <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover mt-2" href="#">Apple - iPhone 13 Pro Max 5G 128GB...</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <img src="assets/wave1.png" width="100%">
-
-    <section class="section-bg-indigo">
+    <section class="mt-4 pt-4">
         <div class="container-lg">
-            <div class="row d-flex justify-content-center text-center">
-                <div class="col-md-6 col-12">
-                    <div class="h1 text-center fw-bold">
-                        Why choose <span class="indigo">PowerUP</span>
-                    </div>
-                    <div class="lead text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ea unde necessitatibus itaque harum architecto!
-                    </div>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <h4 class="fw-bold d-inline">Recently Visited Deals</h4> 
                 </div>
-            </div>
-            <div class="row d-flex justify-content-center text-center">
-                <div class="col-md-3 col-7 mt-5">
+                <hr>
+                <div class="col-6 col-md-2">
+                    <a class="fs-small   link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                    <img src="assets/Pre-Owned iPhone 11.png" alt="" class="img-fluid">
                     
-                    <h2 class="h5 fw-bold mt-4"><img class="img-fluid mb-1" src="assets/checkmark.png" alt="" width="20px"> Easy and Quick</h2>
-                    <p class="lead fs-6">Fast shipping or instant accessed when purchased digitally.</p>
-                </div>
+                    Apple - Pre-Owned iPhone 11 64GB (Unlocked) - Black
+                    </a>
+                    <p>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <a href="#">(100+)</a> <br>
+                        <span class="fw-bold">399.99</span> <br>
+                        <span class="text-decoration-line-through">490.00</span>
+                    </p> 
+                </div>  
 
-                <div class="col-md-3 col-7 mt-5">
-                    <h2 class="h5 fw-bold mt-4"><img class="img-fluid mb-1" src="assets/checkmark.png" alt="" width="20px"> Safe & Secure</h2>
-                    <p class="lead fs-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere.</p>
+                <div class="col-6 col-md-2">
+                    <a class="fs-small   link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                    <img src="assets/Pre-Owned iPhone 11.png" alt="" class="img-fluid">
+                    
+                    Apple - Pre-Owned iPhone 11 64GB (Unlocked) - Black
+                    </a>
+                    <p>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <a href="#">(100+)</a> <br>
+                        <span class="fw-bold">399.99</span> <br>
+                        <span class="text-decoration-line-through">490.00</span>
+                    </p> 
                 </div>
-
-                <div class="col-md-3 col-7 mt-5">
-                    <h2 class="h5 fw-bold mt-4"><img class="img-fluid mb-1" src="assets/checkmark.png" alt="" width="20px"> Affordable</h2>
-                    <p class="lead fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi?</p>
+                <div class="col-6 col-md-2">
+                    <a class="fs-small   link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                    <img src="assets/Pre-Owned iPhone 11.png" alt="" class="img-fluid">
+                    Apple - Pre-Owned iPhone 11 64GB (Unlocked) - Black
+                    </a>
+                    <p>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <a href="#">(100+)</a> <br>
+                        <span class="fw-bold">399.99</span> <br>
+                        <span class="text-decoration-line-through">490.00</span>
+                    </p> 
                 </div>
-
+                <div class="col-6 col-md-2">
+                    <a class="fs-small   link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                    <img src="assets/Pre-Owned iPhone 11.png" alt="" class="img-fluid">
+                    
+                    Apple - Pre-Owned iPhone 11 64GB (Unlocked) - Black
+                    </a>
+                    <p>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <a href="#">(100+)</a> <br>
+                        <span class="fw-bold">399.99</span> <br>
+                        <span class="text-decoration-line-through">490.00</span>
+                    </p> 
                 </div>
-        </div>
-    </section>
-    <img src="assets/wave2.png" width="100%">
-
-    <section id="games">
-        <div class="container-lg">
-            <div class="row d-flex justify-content-center">
-                <div class="col-12 mb-5">
-                    <div class="h1 text-center fw-bold">
-                        Newly <span class="indigo">Arrived</span>
-                    </div>
+                <div class="col-6 col-md-2">
+                    <a class="fs-small   link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                    <img src="assets/Pre-Owned iPhone 11.png" alt="" class="img-fluid">
+                    
+                    Apple - Pre-Owned iPhone 11 64GB (Unlocked) - Black
+                    </a>
+                    <p>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <a href="#">(100+)</a> <br>
+                        <span class="fw-bold">399.99</span> <br>
+                        <span class="text-decoration-line-through">490.00</span>
+                    </p> 
                 </div>
-                <div class="col-md-2 col-6 ms-5">
-                    <img src="assets/iPhone 14.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">iPhone 14</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$29.99</span> $19.99</p>
-                </div>
-                <div class="col-md-2 col-6 ms-5">
-                    <img src="assets/PS5.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">PlayStation 5 Console</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$59.99</span> $19.99</p>
-                </div>
-                <div class="col-md-2 col-6 ms-5">
-                    <img src="assets/Airpods Max.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">AirPods Max</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$59.99</span> $19.99</p>
-                </div>
-                <div class="col-md-2 col-6 ms-5">
-                    <img src="assets/JBL Speaker.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">JBL Speaker</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$129.99</span> $104.99</p>
-                </div>
-            </div>  
-        </div>
-    </section>
-
-    <section class="mt-5 pt-5 section-bg-indigo">
-        <div class="container-lg">
-            <div class="row d-flex justify-content-center">
-                <div class="col-12 mb-5">
-                    <div class="h1 text-center fw-bold">
-                        Newly <span class="indigo">Arrived</span>
-                    </div>
-                </div>
-                <div class="col-md-2 col-6 ms-md-5">
-                    <img class="border border-2 border-dark" src="assets/iPhone 14.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">iPhone 14</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$29.99</span> $19.99</p>
-                </div>
-                <div class="col-md-2 col-6 ms-md-5">
-                    <img class="border border-2 border-dark" src="assets/PS5.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">PlayStation 5 Console</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$59.99</span> $19.99</p>
-                </div>
-                <div class="col-md-2 col-6 ms-md-5">
-                    <img class="border border-2 border-dark" src="assets/Airpods Max.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">AirPods Max</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$59.99</span> $19.99</p>
-                </div>
-                <div class="col-md-2 col-6 ms-md-5">
-                    <img class="border border-2 border-dark" src="assets/JBL Speaker.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">JBL Speaker</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$129.99</span> $104.99</p>
-                </div>
-                <div class="col-md-2 col-6 ms-md-5">
-                    <img class="border border-2 border-dark" src="assets/iPhone 14.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">iPhone 14</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$29.99</span> $19.99</p>
-                </div>
-                <div class="col-md-2 col-6 ms-md-5">
-                    <img class="border border-2 border-dark" src="assets/PS5.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">PlayStation 5 Console</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$59.99</span> $19.99</p>
-                </div>
-                <div class="col-md-2 col-6 ms-md-5">
-                    <img class="border border-2 border-dark" src="assets/Airpods Max.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">AirPods Max</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$59.99</span> $19.99</p>
-                </div>
-                <div class="col-md-2 col-6 ms-md-5">
-                    <img class="border border-2 border-dark" src="assets/JBL Speaker.png" alt="" width="200px">
-                    <p class="mb-0 h6 fs-6">JBL Speaker</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <p><span class="text-decoration-line-through text-secondary">$129.99</span> $104.99</p>
-                </div>
-            </div>  
-        </div>
-    </section>
-
-    <section class="pt-5 section-bg-indigo">
-        <div class="container-lg">
-            <div class="row d-flex justify-content-center">
-                <div class="col-12 col-md-6 text-center">
-                    <h1 class="h1 text-center fw-bold">Explore <span class="indigo">More</span></h1>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-12 col-md-6 text-center">
-                    <button class="btn btn-lg px-4 bg-indigo text-light mt-3 mb-5">Browse More</button>
+                <div class="col-6 col-md-2">
+                    <a class="fs-small   link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                    <img src="assets/Pre-Owned iPhone 11.png" alt="" class="img-fluid">
+                    
+                    Apple - Pre-Owned iPhone 11 64GB (Unlocked) - Black
+                    </a>
+                    <p>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffea00;"></i>
+                        <a href="#">(100+)</a> <br>
+                        <span class="fw-bold">399.99</span> <br>
+                        <span class="text-decoration-line-through">490.00</span>
+                    </p> 
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-dark">
-        <div class="container-lg">
-            <div class="row d-flex justify-content-center">
-                <div class="col-6 text-center mt-5 mb-3">
-                    <h1 class="h1 text-light">PowerUP</h1>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-8 text-center">
-                    <a class="px-2 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-light" href="#">
-                        Home
-                      </a>
-                      <a class="px-2 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-light" href="#">
-                        About
-                      </a>
-                      <a class="px-2 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-light" href="#">
-                        Books
-                      </a>
-                      <a class="px-2 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-light" href="#">
-                        Contact
-                      </a>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-6 text-light mt-3 text-center">
-                    <p>Copyright &copy; 2023 PowerUP </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
 
+    <!-- <script src="app.js"></script> -->
+    <script src="currentProb.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

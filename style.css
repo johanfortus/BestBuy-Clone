@@ -1,19 +1,49 @@
-.indigo{
-    color: rgba(79,82,255,255);
+.bb-color{
+    color: #0a4abf;
 }
 
-.indigoBackground{
-    background-color: rgba(79,82,255,255);
+.bg-bestbuy{
+    background-color: #0a4abf;
+}
+.bg-bestbuy-darker{
+    background-color: #083ea2;
+}
+#searchBar{
+    width: 500px;
 }
 
-.wave{
-    position: absolute;
-    bottom: -160px;
-    transform: translateY(100%) rotate(180deg);
-    z-index: 1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 101vw;
-    height: 12vw;
-    left: 0;
+.fs-small{
+    font-size: 12px;
 }
+.fs-smaller{
+    font-size: 10px;
+}
+.underlinedLink:hover{
+    text-decoration: underline;
+}
+.bg-white{
+    background-color: white;
+}
+.text-white{
+    color: white;
+}
+.text-bestbuyyellow{
+    color: #f6eb16;
+}
+#bg-bestbuyyellow{
+    background-color: #f6eb16;
+}
+#bg-bestbuyyellow:hover{
+    background-color: #c1b811;
+}
+.dealBorder{
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    #searchBar{
+        width: 100%;
+    }
+  }
+
